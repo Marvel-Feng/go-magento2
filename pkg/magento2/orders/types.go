@@ -134,7 +134,7 @@ type Order struct {
 	Weight                                  int    `json:"weight,omitempty"`
 	XForwardedFor                           string `json:"x_forwarded_for,omitempty"`
 	Items                                   []Item `json:"items,omitempty"`
-	BillingAddress                          struct {
+	BillingAddress                          *struct {
 		AddressType         string   `json:"address_type,omitempty"`
 		City                string   `json:"city,omitempty"`
 		Company             string   `json:"company,omitempty"`
@@ -168,7 +168,7 @@ type Order struct {
 			} `json:"checkout_fields,omitempty"`
 		} `json:"extension_attributes,omitempty"`
 	} `json:"billing_address,omitempty"`
-	Payment struct {
+	Payment *struct {
 		AccountStatus             string   `json:"account_status,omitempty"`
 		AdditionalData            string   `json:"additional_data,omitempty"`
 		AdditionalInformation     []string `json:"additional_information,omitempty"`
@@ -240,7 +240,7 @@ type Order struct {
 		} `json:"extension_attributes,omitempty"`
 	} `json:"payment,omitempty"`
 	StatusHistories     []StatusHistory `json:"status_histories,omitempty"`
-	ExtensionAttributes struct {
+	ExtensionAttributes *struct {
 		ShippingAssignments []struct {
 			Shipping struct {
 				Address struct {
