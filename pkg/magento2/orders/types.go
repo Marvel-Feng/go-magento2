@@ -70,7 +70,7 @@ type Order struct {
 	DiscountRefunded                        float64 `json:"discount_refunded,omitempty"`
 	EditIncrement                           float64 `json:"edit_increment,omitempty"`
 	EmailSent                               float64 `json:"email_sent,omitempty"`
-	EntityID                                float64 `json:"entity_id,omitempty"`
+	EntityID                                int     `json:"entity_id,omitempty"`
 	ExtCustomerID                           string  `json:"ext_customer_id,omitempty"`
 	ExtOrderID                              string  `json:"ext_order_id,omitempty"`
 	ForcedShipmentWithInvoice               float64 `json:"forced_shipment_with_invoice,omitempty"`
@@ -142,7 +142,7 @@ type Order struct {
 		CustomerAddressID   float64  `json:"customer_address_id,omitempty"`
 		CustomerID          float64  `json:"customer_id,omitempty"`
 		Email               string   `json:"email,omitempty"`
-		EntityID            float64  `json:"entity_id,omitempty"`
+		EntityID            int      `json:"entity_id,omitempty"`
 		Fax                 string   `json:"fax,omitempty"`
 		Firstname           string   `json:"firstname,omitempty"`
 		Lastname            string   `json:"lastname,omitempty"`
@@ -213,7 +213,7 @@ type Order struct {
 		EcheckBankName            string   `json:"echeck_bank_name,omitempty"`
 		EcheckRoutingNumber       string   `json:"echeck_routing_number,omitempty"`
 		EcheckType                string   `json:"echeck_type,omitempty"`
-		EntityID                  float64  `json:"entity_id,omitempty"`
+		EntityID                  int      `json:"entity_id,omitempty"`
 		LastTransID               string   `json:"last_trans_id,omitempty"`
 		Method                    string   `json:"method,omitempty"`
 		ParentID                  float64  `json:"parent_id,omitempty"`
@@ -225,7 +225,7 @@ type Order struct {
 		ShippingRefunded          float64  `json:"shipping_refunded,omitempty"`
 		ExtensionAttributes       *struct {
 			VaultPaymentToken *struct {
-				EntityID          float64 `json:"entity_id,omitempty"`
+				EntityID          int     `json:"entity_id,omitempty"`
 				CustomerID        float64 `json:"customer_id,omitempty"`
 				PublicHash        string  `json:"public_hash,omitempty"`
 				PaymentMethodCode string  `json:"payment_method_code,omitempty"`
@@ -251,7 +251,7 @@ type Order struct {
 					CustomerAddressID   float64  `json:"customer_address_id,omitempty"`
 					CustomerID          float64  `json:"customer_id,omitempty"`
 					Email               string   `json:"email,omitempty"`
-					EntityID            float64  `json:"entity_id,omitempty"`
+					EntityID            int      `json:"entity_id,omitempty"`
 					Fax                 string   `json:"fax,omitempty"`
 					Firstname           string   `json:"firstname,omitempty"`
 					Lastname            string   `json:"lastname,omitempty"`
@@ -768,7 +768,7 @@ type ProductOption struct {
 type StatusHistory struct {
 	Comment             string  `json:"comment,omitempty"`
 	CreatedAt           string  `json:"created_at,omitempty"`
-	EntityID            float64 `json:"entity_id,omitempty"`
+	EntityID            int     `json:"entity_id,omitempty"`
 	EntityName          string  `json:"entity_name,omitempty"`
 	IsCustomerNotified  float64 `json:"is_customer_notified,omitempty"`
 	IsVisibleOnFront    float64 `json:"is_visible_on_front,omitempty"`
